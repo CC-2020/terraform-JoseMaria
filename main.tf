@@ -1,6 +1,6 @@
 //Se crea la instancia
 resource "google_compute_instance" "default" {
- project      = "cc2020-271418"
+ project      = "<ID_INSTANCE>"
  name         = "apache-vm"
  machine_type = "f1-micro"
  zone         = "us-central1-a"
@@ -28,7 +28,7 @@ resource "google_compute_instance" "default" {
 
 //Creamos las reglas del firewall
 resource "google_compute_firewall" "default"{
-  project = "cc2020-271418"
+  project = "<ID_INSTANCE>"
   name    = "firewall-instances"
   network = google_compute_network.default.self_link
   priority = 65534
